@@ -3,7 +3,7 @@ package middleware
 import (
 	"net/http"
 
-	"github.com/thesambayo/digillet-api/api/contexts"
+	"github.com/thesambayo/digillets-api/api/contexts"
 )
 
 func (middleware *Middleware) RequireAuthenticatedUser(next http.HandlerFunc) http.HandlerFunc {

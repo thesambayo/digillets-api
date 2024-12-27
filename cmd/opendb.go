@@ -5,7 +5,7 @@ import (
 	"database/sql"
 	"time"
 
-	"github.com/thesambayo/digillet-api/internal/config"
+	"github.com/thesambayo/digillets-api/internal/config"
 )
 
 func openDB(cfg config.Config) (*sql.DB, error) {

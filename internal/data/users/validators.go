@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/thesambayo/digillet-api/internal/validators"
+	"github.com/thesambayo/digillets-api/internal/validators"
 )
 
 func (userModel UserModel) ValidateName(validator *validators.Validator, name string) {

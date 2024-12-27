@@ -1,4 +1,4 @@
-module github.com/thesambayo/digillet-api
+module github.com/thesambayo/digillets-api
 
 go 1.23.4
 

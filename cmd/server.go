@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/thesambayo/digillet-api/api/routes"
+	"github.com/thesambayo/digillets-api/api/routes"
 )
 
 func (app *application) serve() error {

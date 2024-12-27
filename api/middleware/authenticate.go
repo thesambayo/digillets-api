@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/pascaldekloe/jwt"
-	"github.com/thesambayo/digillet-api/api/contexts"
-	"github.com/thesambayo/digillet-api/internal/constants"
-	"github.com/thesambayo/digillet-api/internal/data/users"
+	"github.com/thesambayo/digillets-api/api/contexts"
+	"github.com/thesambayo/digillets-api/internal/constants"
+	"github.com/thesambayo/digillets-api/internal/data/users"
 )
 
 func (middleware *Middleware) Authenticate(next http.Handler) http.Handler {

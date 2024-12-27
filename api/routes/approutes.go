@@ -4,10 +4,10 @@ import (
 	"expvar"
 	"net/http"
 
-	"github.com/thesambayo/digillet-api/api/httpx"
-	"github.com/thesambayo/digillet-api/api/middleware"
-	"github.com/thesambayo/digillet-api/internal/config"
-	"github.com/thesambayo/digillet-api/internal/data"
+	"github.com/thesambayo/digillets-api/api/httpx"
+	"github.com/thesambayo/digillets-api/api/middleware"
+	"github.com/thesambayo/digillets-api/internal/config"
+	"github.com/thesambayo/digillets-api/internal/data"
 )
 
 type Routes struct {

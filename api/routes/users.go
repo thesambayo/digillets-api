@@ -4,12 +4,12 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/thesambayo/digillet-api/api/contexts"
-	"github.com/thesambayo/digillet-api/api/httpx"
-	"github.com/thesambayo/digillet-api/internal/constants"
-	"github.com/thesambayo/digillet-api/internal/data/users"
-	"github.com/thesambayo/digillet-api/internal/publicid"
-	"github.com/thesambayo/digillet-api/internal/validators"
+	"github.com/thesambayo/digillets-api/api/contexts"
+	"github.com/thesambayo/digillets-api/api/httpx"
+	"github.com/thesambayo/digillets-api/internal/constants"
+	"github.com/thesambayo/digillets-api/internal/data/users"
+	"github.com/thesambayo/digillets-api/internal/publicid"
+	"github.com/thesambayo/digillets-api/internal/validators"
 )
 
 func (routes *Routes) CreateUser(resWriter http.ResponseWriter, req *http.Request) {

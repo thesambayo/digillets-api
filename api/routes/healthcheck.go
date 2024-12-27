@@ -3,7 +3,7 @@ package routes
 import (
 	"net/http"
 
-	"github.com/thesambayo/digillet-api/api/httpx"
+	"github.com/thesambayo/digillets-api/api/httpx"
 )
 
 func (routes *Routes) HealthcheckHandler(resWriter http.ResponseWriter, req *http.Request) {

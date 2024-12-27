@@ -3,7 +3,7 @@ package data
 import (
 	"database/sql"
 
-	"github.com/thesambayo/digillet-api/internal/data/users"
+	"github.com/thesambayo/digillets-api/internal/data/users"
 )
 
 type Models struct {

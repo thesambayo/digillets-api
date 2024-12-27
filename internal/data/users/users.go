@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/thesambayo/digillet-api/internal/constants"
+	"github.com/thesambayo/digillets-api/internal/constants"
 )
 
 // User represents the users table in the database.

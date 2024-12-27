@@ -2,7 +2,7 @@
 // a collection of methods and useful tools for HTTP handling.
 package httpx
 
-import "github.com/thesambayo/digillet-api/internal/jsonlog"
+import "github.com/thesambayo/digillets-api/internal/jsonlog"
 
 type Utils struct {
 	logger *jsonlog.Logger

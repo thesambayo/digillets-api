@@ -6,10 +6,10 @@ import (
 
 	_ "github.com/lib/pq"
 
-	"github.com/thesambayo/digillet-api/api/httpx"
-	"github.com/thesambayo/digillet-api/internal/config"
-	"github.com/thesambayo/digillet-api/internal/data"
-	"github.com/thesambayo/digillet-api/internal/jsonlog"
+	"github.com/thesambayo/digillets-api/api/httpx"
+	"github.com/thesambayo/digillets-api/internal/config"
+	"github.com/thesambayo/digillets-api/internal/data"
+	"github.com/thesambayo/digillets-api/internal/jsonlog"
 )
 
 type application struct {

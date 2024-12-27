@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/pascaldekloe/jwt"
-	"github.com/thesambayo/digillet-api/api/httpx"
-	"github.com/thesambayo/digillet-api/internal/constants"
-	"github.com/thesambayo/digillet-api/internal/validators"
+	"github.com/thesambayo/digillets-api/api/httpx"
+	"github.com/thesambayo/digillets-api/internal/constants"
+	"github.com/thesambayo/digillets-api/internal/validators"
 )
 
 func (routes *Routes) AuthenticateUser(resWriter http.ResponseWriter, req *http.Request) {
