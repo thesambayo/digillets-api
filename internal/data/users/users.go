@@ -12,7 +12,7 @@ import (
 
 // User represents the users table in the database.
 type User struct {
-	ID        string    `json:"-"`
+	ID        int64     `json:"-"`
 	PublicID  string    `json:"public_id"`
 	Name      string    `json:"name"`
 	Email     string    `json:"email"`
@@ -41,11 +41,10 @@ func (userModel UserModel) Insert(user *User) (*User, error) {
     VALUES ($1, $2, $3, $4, $5)
     RETURNING id, created_at, version`
 
-	args := []interface{}{user.PublicID, user.Name, user.Email, user.Password.hash, user.Activated}
-
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
 	defer cancel()
 
+	args := []interface{}{user.PublicID, user.Name, user.Email, user.Password.hash, user.Activated}
 	// If the table already contains a record with this email address, then when we try
 	// to perform the insert there will be a violation of the UNIQUE "user_email_key"
 	// constraint that we set up in the previous chapter. We check for this error

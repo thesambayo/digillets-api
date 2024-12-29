@@ -39,6 +39,30 @@ func Handlers(cfg config.Config, models *data.Models, httpx *httpx.Utils) http.H
 		middleware.RequireAuthenticatedUser(routes.GetUserProfile),
 	)
 
+	// Currencies
+	router.HandleFunc(
+		"GET /v1/rates/convert",
+		middleware.RequireAuthenticatedUser(routes.GetTwoCurrenciesExchangeRate),
+	)
+	router.HandleFunc(
+		"GET /v1/rates/list",
+		middleware.RequireAuthenticatedUser(routes.GetCurrencyExchangeRates),
+	)
+
+	// WALLETS
+	router.HandleFunc(
+		"POST /v1/wallets",
+		middleware.RequireAuthenticatedUser(routes.CreateWallet),
+	)
+	router.HandleFunc(
+		"GET /v1/wallets",
+		middleware.RequireAuthenticatedUser(routes.GetWallets),
+	)
+	router.HandleFunc(
+		"GET /v1/wallets/{id}",
+		middleware.RequireAuthenticatedUser(routes.GetSingleWallet),
+	)
+
 	// middlewares usages around servemux
 	return middleware.Metrics( // first
 		middleware.RecoverFromPanic(
