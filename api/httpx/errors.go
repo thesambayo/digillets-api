@@ -1,7 +1,6 @@
 package httpx
 
 import (
-	"fmt"
 	"net/http"
 )
 
@@ -50,10 +49,10 @@ func (utils *Utils) NotFoundResponse(resWriter http.ResponseWriter, req *http.Re
 
 // The MethodNotAllowedResponse() method will be used to send a 405 Method Not Allowed
 // status code and JSON response to the client.
-func (utils *Utils) MethodNotAllowedResponse(resWriter http.ResponseWriter, req *http.Request) {
-	message := fmt.Sprintf("the %s method is not supported for this resource", req.Method)
-	utils.ErrorResponse(resWriter, req, http.StatusMethodNotAllowed, message)
-}
+// func (utils *Utils) MethodNotAllowedResponse(resWriter http.ResponseWriter, req *http.Request) {
+// 	message := fmt.Sprintf("the %s method is not supported for this resource", req.Method)
+// 	utils.ErrorResponse(resWriter, req, http.StatusMethodNotAllowed, message)
+// }
 
 func (utils *Utils) BadRequestResponse(resWriter http.ResponseWriter, req *http.Request, err error) {
 	utils.ErrorResponse(resWriter, req, http.StatusBadRequest, err.Error())

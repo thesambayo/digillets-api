@@ -12,8 +12,7 @@ const (
 )
 
 // New generates a public id using nanoid
-// it requires a prefix such as can be found in the gist below:
-// https://gist.github.com/fnky/76f533366f75cf75802c8052b577e2a5
+// it requires a prefix:
 // returns such as usr_{randomFromNanoid}
 func New(prefix string) (string, error) {
 	id, err := nanoid.Generate(alphabet, length)

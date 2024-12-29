@@ -54,17 +54,17 @@ db/migrations/up: confirm
 	@echo 'Running up migrations...'
 	migrate -path=./migrations -database ${DB_DSN} up
 
-## db/migrations/goto position=$1: takes database to particular migrations. confirm included as prerequisite.
+## db/migrations/goto version=$1: takes database to particular migrations. confirm included as prerequisite.
 .PHONY: db/migrations/goto
 db/migrations/goto: confirm
 	@echo 'Running up migrations...'
-	migrate -path=./migrations -database ${DB_DSN} goto ${position}
+	migrate -path=./migrations -database ${DB_DSN} goto ${version}
 
-## db/migrations/goto position=$1: takes database to particular migrations. confirm included as prerequisite.
+## db/migrations/goto version=$1: takes database to particular migrations. confirm included as prerequisite.
 .PHONY: db/migrations/force
 db/migrations/force: confirm
 	@echo 'Running up migrations...'
-	migrate -path=./migrations -database ${DB_DSN} force ${position}
+	migrate -path=./migrations -database ${DB_DSN} force ${version}
 
 #==================================================================================== #
 # QUALITY CONTROL
