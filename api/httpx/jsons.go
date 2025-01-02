@@ -30,7 +30,11 @@ func (utils *Utils) WriteJSON(resWriter http.ResponseWriter, status int, data En
 	// then write the status code and JSON response.
 	resWriter.Header().Set("Content-Type", "application/json")
 	resWriter.WriteHeader(status)
-	resWriter.Write(marshalledJSON)
+	_, err = resWriter.Write(marshalledJSON)
+
+	if err != nil {
+		return err
+	}
 
 	return nil
 }
